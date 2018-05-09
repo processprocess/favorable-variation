@@ -1,0 +1,124 @@
+.carousel {
+  height: 100%;
+  //@include maxWidthContainer;
+  .image {
+    height: 100%;
+  }
+}
+
+.carousel-with-one-image {
+  height: 30vh;
+  position: relative;
+  // @include mediaWiderThanMobile {
+  //   height: 70vh;
+  // }
+}
+
+.slick-slide {
+  height: 70vh;
+  position: relative;
+  // @include mediaWiderThanMobile {
+  //   height: 70vh;
+  // }
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  // z-index: 2;
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(-45deg);
+  }
+}
+
+.slick-prev {
+  left: 12px;
+  // @include mediaWiderThanMobile {
+  //   left: -24px;
+  // }
+  &:before {
+  }
+}
+
+.slick-next {
+  right: 12px;
+  // @include mediaWiderThanMobile {
+  //   right: -24px;
+  // }
+  &:before {
+    transform: rotate(135deg);
+  }
+}
+
+/* Dots */
+
+// .slick-dots {
+//   display: flex !important;
+//   list-style: none;
+//   position: absolute;
+//   padding: 0;
+//   bottom: 0px;
+//   left: 0;
+//   right: 0;
+//   z-index: 2;
+//   flex-direction: row;
+//   justify-content: center;
+//
+//   li {
+//     flex: 0 0 auto;
+//     display: inline-block;
+//     width: 15px;
+//     height: 15px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-left: 11px;
+//     margin-right: 11px;
+//     button {
+//       cursor: pointer;
+//       flex: 0 0 auto;
+//       border-radius: 50%;
+//       color: transparent;
+//       border: none;
+//       background-color: rgba(255, 255, 255, 0.5);
+//       outline: none;
+//       padding: 0;
+//       margin: 0;
+//       width: 13px;
+//       height: 13px;
+//       font-size: 1px;
+//     }
+//     &.slick-active {
+//       button {
+//         background-color: white;
+//       }
+//     }
+//   }
+// }

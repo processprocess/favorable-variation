@@ -1,0 +1,76 @@
+/**
+Resets styles for accessibility view
+It should not use any special fonts, images, colors, etc.
+*/
+
+* {
+	background-image: none !important;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+*:empty {
+	display: none;
+}
+
+.site-loader {
+	display: none;
+}
+
+body .wrapper {
+	width: 90%;
+	margin: auto;
+
+	img,
+	svg {
+		display: none;
+	}
+
+	// TEL links must have the word "CALL" prepended
+	a[href^=tel] {
+		&:before {
+			content: "CALL";
+			text-decoration: underline;
+			display: inline-block;
+		}
+	}
+
+	.accessible-header {
+		text-transform: uppercase;
+		text-align: center;
+		padding-top: 15px;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		ul {
+			display: block;
+			margin: 15px 0;
+
+			li {
+				display: inline-block;
+				padding: 0 5px;
+				border-right: 1px solid #000;
+				font-size: .9rem;
+
+				&:last-of-type {
+					border: 0;
+				}
+			}
+		}
+	}
+
+	.dk-select {
+		display: none;
+	}
+	select[data-dkcacheid] {
+		display: block;
+	}
+
+	.scroll * {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+	}
+}

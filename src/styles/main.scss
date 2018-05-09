@@ -1,0 +1,33 @@
+@import "global/normalize";
+@import "global/variables";
+@import "global/fonts";
+
+// This link should be styled to show when focused via tab-clicking
+#accessible-link {
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  transform: translate(0, -100%);
+  z-index: 999999999;
+  font-weight: 700;
+  font-size: 12px;
+  transition: all 0.2s ease;
+
+  &:focus {
+    top: 2px;
+    transform: none;
+  }
+}
+
+html:not(.accessible) {
+  @import "global/global";
+  @import "vendor/*";
+  @import "containers/*";
+  @import "partials/*";
+  @import "views/*";
+  @import "widgets/*";
+}
+
+html.accessible {
+  @import "global/accessible";
+}

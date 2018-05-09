@@ -1,0 +1,40 @@
+.site-loader {
+  background-color: #fff;
+  opacity: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  transition: all 500ms ease;
+  visibility: visible;
+  overflow: hidden;
+
+  // for debugging
+  opacity: 0;
+  pointer-events: none;
+
+  &--loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  &__spinner {
+    width: 100%;
+    height: 100%;
+    svg {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      opacity: 0.2;
+    }
+  }
+}
