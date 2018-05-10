@@ -1,0 +1,44 @@
+header {
+  // position: fixed;
+  .fixed {
+    position: fixed;
+  }
+  .top {
+    top: $nav-margin;
+  }
+  .bottom {
+    bottom: $nav-margin;
+  }
+  .left {
+    left: $nav-margin;
+  }
+  .right {
+    right: $nav-margin;
+  }
+  .nav {
+    left: 25vw;
+    @media (max-width: $tablet) {
+      right: $nav-margin;
+      left: auto;
+    }
+    h2 {
+      position: relative;
+      display: inline-block;
+      margin: 0 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: -3px;
+      }
+      &.active,
+      &:hover {
+        border-bottom: 3px solid black;
+      }
+    }
+  }
+}

@@ -50,7 +50,7 @@ export default class App extends React.Component {
   render() {
     return this.isValidBrowser() ? (
       <div className="app">
-        <Header />
+        <Header {...this.props} />
         <TransitionGroup>
           <CSSTransition
             key={this.props.location.key}
