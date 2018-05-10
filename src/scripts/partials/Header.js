@@ -50,11 +50,14 @@ export default class Header extends React.Component {
         <h2 className="fixed bottom left">© {new Date().getFullYear()}</h2>
         <h2
           onClick={this.scrollDown}
-          className="arrow button fixed bottom bump-left"
+          className="scroll-to-next arrow button fixed bottom bump-left"
         >
           ↓
         </h2>
-        <h2 onClick={this.scrollToTop} className="button fixed bottom right">
+        <h2
+          onClick={this.scrollToTop}
+          className="scroll-to-top button fixed bottom right"
+        >
           Top
         </h2>
         <div className="fixed nav top bump-left">

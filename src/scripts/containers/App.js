@@ -1,7 +1,6 @@
 import browser from "bowser";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import InvalidBrowser from "utilities/InvalidBrowser/InvalidBrowser";
-import Footer from "partials/Footer";
 import Header from "partials/Header";
 import sleep from "utilities/sleep";
 import APP_CONFIG from "config/appConfig";
@@ -48,8 +47,9 @@ export default class App extends React.Component {
   }
 
   render() {
+    const { pathname } = this.props.location;
     return this.isValidBrowser() ? (
-      <div className="app">
+      <div className={`app ${pathname.replace("/", "page-")}`}>
         <Header {...this.props} />
         <TransitionGroup>
           <CSSTransition
@@ -90,7 +90,6 @@ export default class App extends React.Component {
             </Switch>
           </CSSTransition>
         </TransitionGroup>
-        <Footer />
       </div>
     ) : (
       <InvalidBrowser />

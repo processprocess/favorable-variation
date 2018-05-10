@@ -4,9 +4,9 @@
     width: 100%;
     position: relative;
     &.hero {
-      // .post-image-wrapper {
-      // opacity: 0.85;
-      // }
+      .post-image-wrapper {
+        opacity: 0.9;
+      }
       .intro-text {
         position: fixed;
         top: 50%;
@@ -15,7 +15,7 @@
         z-index: 4;
         font-weight: bold;
         line-height: 10vw;
-        margin-left: 50px;
+        margin-left: $big-text-margin;
         opacity: 1;
         transition: opacity 0.2s;
         &.scrolled {
