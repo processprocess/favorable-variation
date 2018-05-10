@@ -1,24 +1,43 @@
 header {
-  // position: fixed;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.2s;
+  &.idle {
+    opacity: 0.1;
+  }
   .fixed {
     position: fixed;
   }
   .top {
-    top: $nav-margin;
+    top: $site-margin;
   }
   .bottom {
-    bottom: $nav-margin;
+    bottom: $site-margin;
+  }
+  .center {
+    left: 50%;
+    transform: translateX(-50%);
   }
   .left {
-    left: $nav-margin;
+    left: $site-margin;
   }
   .right {
-    right: $nav-margin;
+    right: $site-margin;
   }
+
+  .arrow {
+    line-height: 1.4;
+  }
+
+  .bump-left {
+    left: 300px;
+  }
+
   .nav {
-    left: 25vw;
+    left: 300px;
     @media (max-width: $tablet) {
-      right: $nav-margin;
+      right: $site-margin;
       left: auto;
     }
     h2 {
