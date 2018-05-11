@@ -1,6 +1,7 @@
 //page transitions
 .page-transition-enter {
   opacity: 0.01;
+  // position: fixed;
 }
 
 .page-transition-enter.page-transition-enter-active {

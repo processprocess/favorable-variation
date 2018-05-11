@@ -17,7 +17,7 @@
         line-height: 10vw;
         margin-left: $big-text-margin;
         opacity: 1;
-        transition: opacity 0.2s;
+        // transition: opacity 0.2s;
         &.scrolled {
           opacity: 0;
         }
@@ -49,6 +49,9 @@
       top: 0;
       height: 100%;
       width: 100%;
+      @media (max-width: $mobile) {
+        padding: 5vw;
+      }
       .post-image {
         height: 100%;
         background-size: contain;

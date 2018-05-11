@@ -7,7 +7,7 @@ export default class Home extends React.Component {
     super(props, context);
     const { content } = props;
     this.posts = content
-      .filter(item => item.fields.itemType === "post")
+      .filter(item => item.fields.title)
       .sort((a, b) => a.fields.id > b.fields.id)
       .map(item => item.fields);
   }

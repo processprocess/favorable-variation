@@ -1,5 +1,5 @@
 import browser from "bowser";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+// import { TransitionGroup, CSSTransition } from "react-transition-group";
 import InvalidBrowser from "utilities/InvalidBrowser/InvalidBrowser";
 import Header from "partials/Header";
 import sleep from "utilities/sleep";
@@ -51,45 +51,45 @@ export default class App extends React.Component {
     return this.isValidBrowser() ? (
       <div className={`app ${pathname.replace("/", "page-")}`}>
         <Header {...this.props} />
-        <TransitionGroup>
+        {/* <TransitionGroup>
           <CSSTransition
             key={this.props.location.key}
             timeout={500}
             classNames="page-transition"
-          >
-            <Switch location={this.props.location}>
-              <Route
-                exact
-                key="/"
-                path="/"
-                render={() => {
-                  // render={props => {
-                  return <Home {...this.props} />;
-                  // return <Home page={page} {...this.props} {...props} />;
-                }}
-              />
+          > */}
+        <Switch location={this.props.location}>
+          <Route
+            exact
+            key="/"
+            path="/"
+            render={() => {
+              // render={props => {
+              return <Home {...this.props} />;
+              // return <Home page={page} {...this.props} {...props} />;
+            }}
+          />
 
-              <Route
-                exact
-                key="/about"
-                path="/about"
-                render={() => {
-                  // render={props => {
-                  return <About />;
-                  // return <Home page={page} {...this.props} {...props} />;
-                }}
-              />
+          <Route
+            exact
+            key="/about"
+            path="/about"
+            render={() => {
+              // render={props => {
+              return <About {...this.props} />;
+              // return <Home page={page} {...this.props} {...props} />;
+            }}
+          />
 
-              <Route
-                path="/"
-                key="redirectAllElse"
-                render={() => {
-                  return <Redirect to="/" />;
-                }}
-              />
-            </Switch>
-          </CSSTransition>
-        </TransitionGroup>
+          <Route
+            path="/"
+            key="redirectAllElse"
+            render={() => {
+              return <Redirect to="/" />;
+            }}
+          />
+        </Switch>
+        {/* </CSSTransition>
+        </TransitionGroup> */}
       </div>
     ) : (
       <InvalidBrowser />

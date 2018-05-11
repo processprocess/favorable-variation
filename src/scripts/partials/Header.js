@@ -43,7 +43,6 @@ export default class Header extends React.Component {
   render() {
     const { pathname } = this.props.location;
     const { idle } = this.state;
-    console.log(idle);
     return (
       <header className={idle ? "idle" : ""}>
         <h2 className="fixed top left">Philip Hunter Bell</h2>
