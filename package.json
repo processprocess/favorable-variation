@@ -1,9 +1,12 @@
 {
   "author": "Philip Bell",
   "config": {
-    "DEV_SITE": "http://localhost:5001/",
+    "DEV_SITE": "https://processprocess.github.io/favorable-variation/",
     "GA_TRACKING_CODE": "placeholder",
     "SOUNDS": "1"
+  },
+  "engines": {
+    "node": "8.5.0"
   },
   "description": "Favorable Variation Portfolio Site",
   "dependencies": {

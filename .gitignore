@@ -2,3 +2,5 @@
 node_modules/
 .vscode/
 admin/
+npm-debug.log
+/*.env
